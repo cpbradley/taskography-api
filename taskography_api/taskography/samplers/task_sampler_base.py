@@ -265,8 +265,6 @@ class TaskSamplerBase(object):
 
         # Receptacle locations
         for r_id in self.receptacles["all"]:
-            print(self.sg.object[r_id].location)
-            print(np.floor(self.sg.object[r_id].location / voxel_res))
             rec_coord = np.floor(self.sg.object[r_id].location / voxel_res).astype(int)[:2]
             room_id = self.sg.object[r_id].parent_room
             floor_num = self.sg.room[room_id].floor_number
@@ -280,8 +278,6 @@ class TaskSamplerBase(object):
 
         # Place locations (room doors)
         for room_id in self.room_to_place_map:
-            print(self.sg.room[room_id].location)
-            print(np.floor(self.sg.room[room_id].location / voxel_res))
             room_coord = np.floor(self.sg.room[room_id].location / voxel_res).astype(int)[:2]
             floor_num = self.sg.room[room_id].floor_number
             room_data = (room_coord, room_id, floor_num)

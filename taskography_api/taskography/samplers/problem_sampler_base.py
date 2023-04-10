@@ -39,7 +39,6 @@ class ProblemSamplerBase(ABC, TaskSamplerBase):
             complexity: level of difficulty for the sampled task (default: 1)
             bagslots: number of bagslots the agent is equipped with for Courier tasks (default: None)
         """
-        print('ProblemSamplerBase')
         assert os.path.exists(domain_filepath)
         assert os.path.exists(scene_graph_filepath)
 
