@@ -9,7 +9,8 @@ from abc import ABC, abstractmethod
 from pddlgym.parser import PDDLDomainParser, PDDLProblemParser
 from pddlgym.structs import Literal, LiteralConjunction, Predicate, Type
 from .task_sampler_base import TaskSamplerBase
-from taskography_api.taskography.utils.loader import loader
+#from taskography_api.taskography.utils.loader import loader
+from taskography_api.taskography.utils.dsg_loader import dsg_loader as loader
 from taskography_api.taskography.utils.utils import (
     scene_graph_name,
     sampler_name,
@@ -38,6 +39,7 @@ class ProblemSamplerBase(ABC, TaskSamplerBase):
             complexity: level of difficulty for the sampled task (default: 1)
             bagslots: number of bagslots the agent is equipped with for Courier tasks (default: None)
         """
+        print('ProblemSamplerBase')
         assert os.path.exists(domain_filepath)
         assert os.path.exists(scene_graph_filepath)
 

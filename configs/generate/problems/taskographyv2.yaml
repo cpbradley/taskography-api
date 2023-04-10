@@ -9,11 +9,12 @@ sampler_kwargs:
 
 dataset: PDDLGymDataset
 dataset_kwargs:
-  data_dir: $DATA/3dscenegraph
-  split: tiny
+  #data_dir: $DATA/3dscenegraph
+  data_dir: $DATA
+  split: split1
   problem_dir: ./third_party/pddlgym/pddlgym/pddl
   save_samplers: True
   sampler_dir: datasets/samplers/rearrangement
-  train_scenes: 10
+  train_scenes: 1
   samples_per_train_scene: 4
   samples_per_test_scene: 5

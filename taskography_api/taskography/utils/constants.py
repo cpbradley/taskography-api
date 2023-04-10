@@ -17,15 +17,17 @@ DOMAIN_BAGSLOTS = {
 }
 
 
-OFFICIAL_SPLITS = {"tiny": "tiny/verified_graph", "medium": "medium/automated_graph"}
+#OFFICIAL_SPLITS = {"tiny": "tiny/verified_graph", "medium": "medium/automated_graph"}
+OFFICIAL_SPLITS = {"split1": "split1", "split2": "split2"}
 
 
-SPLIT_SCENES = {
-    "tiny": 35,
-    "tiny/verified_graph": 35,
-    "medium": 105,
-    "medium/automated_graph": 105,
-}
+SPLIT_SCENES = {"split1": 1, "split2": 1}
+#SPLIT_SCENES = {
+#    "tiny": 35,
+#    "tiny/verified_graph": 35,
+#    "medium": 105,
+#    "medium/automated_graph": 105,
+#}
 
 
 # scene entities
@@ -53,154 +55,186 @@ ROOMS = {
 
 
 OBJECTS = {
-    "apple",
-    "backpack",
-    "banana",
-    "baseball bat",
-    "baseball glove",
-    "book",
-    "bottle",
-    "bowl",
-    "cake",
-    "cell phone",
-    "clock",
-    "cup",
-    "frisbee",
-    "handbag",
-    "keyboard",
-    "kite",
-    "knife",
-    "laptop",
-    "mouse",
-    "orange",
-    "potted plant",
-    "remote",
-    "spoon",
-    "sports ball",
-    "suitcase",
-    "teddy bear",
-    "tie",
-    "toothbrush",
-    "umbrella",
-    "vase",
-    "wine glass",
-    "bicycle",
-    "motorcycle",
-    "surfboard",
-    "tv",
+    'desk_objects',
+    'wall_objects',
+    'plant',
+    'fire_extinguisher',
 }
+
+#OBJECTS = {
+#    "apple",
+#    "backpack",
+#    "banana",
+#    "baseball bat",
+#    "baseball glove",
+#    "book",
+#    "bottle",
+#    "bowl",
+#    "cake",
+#    "cell phone",
+#    "clock",
+#    "cup",
+#    "frisbee",
+#    "handbag",
+#    "keyboard",
+#    "kite",
+#    "knife",
+#    "laptop",
+#    "mouse",
+#    "orange",
+#    "potted plant",
+#    "remote",
+#    "spoon",
+#    "sports ball",
+#    "suitcase",
+#    "teddy bear",
+#    "tie",
+#    "toothbrush",
+#    "umbrella",
+#    "vase",
+#    "wine glass",
+#    "bicycle",
+#    "motorcycle",
+#    "surfboard",
+#    "tv",
+#}
+
+#SMALL_OBJECTS = {
+#    "apple",
+#    "banana",
+#    "baseball glove",
+#    "book",
+#    "bottle",
+#    "bowl",
+#    "cell phone",
+#    "cup",
+#    "knife",
+#    "mouse",
+#    "orange",
+#    "remote",
+#    "spoon",
+#    "tie",
+#    "toothbrush",
+#    "wine glass",
+#}
 
 SMALL_OBJECTS = {
-    "apple",
-    "banana",
-    "baseball glove",
-    "book",
-    "bottle",
-    "bowl",
-    "cell phone",
-    "cup",
-    "knife",
-    "mouse",
-    "orange",
-    "remote",
-    "spoon",
-    "tie",
-    "toothbrush",
-    "wine glass",
+    'desk_objects',
+    'wall_objects',
+    'plant',
+    'fire_extinguisher',
 }
 
-MEDIUM_OBJECTS = {"cake", "clock", "frisbee", "laptop", "teddy bear", "vase"}
+#MEDIUM_OBJECTS = {"cake", "clock", "frisbee", "laptop", "teddy bear", "vase"}
+MEDIUM_OBJECTS = set()
 
-LARGE_OBJECTS = {
-    "backpack",
-    "baseball bat",
-    "handbag",
-    "keyboard",
-    "kite",
-    "potted plant",
-    "sports ball",
-    "suitcase",
-    "umbrella",
-    "bicycle",
-    "motorcycle",
-    "surfboard",
-    "tv",
-}
+LARGE_OBJECTS = set()
+#LARGE_OBJECTS = {
+#    "backpack",
+#    "baseball bat",
+#    "handbag",
+#    "keyboard",
+#    "kite",
+#    "potted plant",
+#    "sports ball",
+#    "suitcase",
+#    "umbrella",
+#    "bicycle",
+#    "motorcycle",
+#    "surfboard",
+#    "tv",
+#}
 
 assert len(SMALL_OBJECTS.union(MEDIUM_OBJECTS.union(LARGE_OBJECTS))) == len(OBJECTS)
 
 
 # objects that can be placed in HEATING receptacle type
-HEATABLE_OBJECTS = {"apple", "banana", "bottle", "bowl", "cake", "cup", "orange"}
+#HEATABLE_OBJECTS = {"apple", "banana", "bottle", "bowl", "cake", "cup", "orange"}
+HEATABLE_OBJECTS = set()
 
 # objects that can be placed in COOLING receptacle type
-COOLABLE_OBJECTS = {
-    "apple",
-    "banana",
-    "bottle",
-    "bowl",
-    "cake",
-    "cup",
-    "orange",
-    "wine glass",
-}
+COOLABLE_OBJECTS = set()
+#COOLABLE_OBJECTS = {
+#    "apple",
+#    "banana",
+#    "bottle",
+#    "bowl",
+#    "cake",
+#    "cup",
+#    "orange",
+#    "wine glass",
+#}
 
 # objects that can be placed in CLEANING receptacle type
-CLEANABLE_OBJECTS = {
-    "apple",
-    "banana",
-    "bottle",
-    "bowl",
-    "cup",
-    "frisbee",
-    "knife",
-    "orange",
-    "spoon",
-    "sports ball",
-    "toothbrush",
-    "vase",
-    "wine glass",
-}
+CLEANABLE_OBJECTS = set()
+#CLEANABLE_OBJECTS = {
+#    "apple",
+#    "banana",
+#    "bottle",
+#    "bowl",
+#    "cup",
+#    "frisbee",
+#    "knife",
+#    "orange",
+#    "spoon",
+#    "sports ball",
+#    "toothbrush",
+#    "vase",
+#    "wine glass",
+#}
 
 # receptacle objects can store one or more non-receptacle object
-RECEPTACLE_OBJECTS = {
-    "backpack",
-    "baseball glove",
-    "bottle",
-    "bowl",
-    "handbag",
-    "suitcase",
-    "vase",
-    "wine glass",
-}
+RECEPTACLE_OBJECTS = set()
+#RECEPTACLE_OBJECTS = {
+#    "backpack",
+#    "baseball glove",
+#    "bottle",
+#    "bowl",
+#    "handbag",
+#    "suitcase",
+#    "vase",
+#    "wine glass",
+#}
 
 # non-receptacle objects cannot store other objects
 NON_RECEPTACLE_OBJECTS = OBJECTS - RECEPTACLE_OBJECTS
 
 
+#RECEPTACLES = {
+#    "bed",
+#    "bench",
+#    "boat",
+#    "chair",
+#    "couch",
+#    "dining table",
+#    "microwave",
+#    "oven",
+#    "refrigerator",
+#    "sink",
+#    "toaster",
+#    "toilet",
+#}
+
 RECEPTACLES = {
-    "bed",
-    "bench",
-    "boat",
-    "chair",
-    "couch",
-    "dining table",
-    "microwave",
-    "oven",
-    "refrigerator",
-    "sink",
-    "toaster",
-    "toilet",
+    'big_table',
+    'trashcan',
+    'chair',
+    'table',
+    'couch',
 }
 
 # receptacle types (for generating receptacle receptacle_type facts)
-OPENING_RECEPTACLES = {"microwave", "oven", "refrigerator"}
+#OPENING_RECEPTACLES = {"microwave", "oven", "refrigerator"}
+OPENING_RECEPTACLES = set()
 
-HEATING_RECEPTACLES = {"microwave", "oven", "toaster"}
+HEATING_RECEPTACLES = set()
+#HEATING_RECEPTACLES = {"microwave", "oven", "toaster"}
 
-COOLING_RECEPTACLES = {"refrigerator"}
+COOLING_RECEPTACLES = set()
+#COOLING_RECEPTACLES = {"refrigerator"}
 
-CLEANING_RECEPTACLES = {"sink"}
+CLEANING_RECEPTACLES = set()
+#CLEANING_RECEPTACLES = {"sink"}
 
 # TODO: leave out toggle for now, macro-actions assume toggle on the receptacles
 # TOGGLEABLE_RECEPTACLES = {
@@ -327,3 +361,31 @@ BENCHMARK_DOMAINS = [
     "taskographyv5tiny5bagslots5scrub",
     "taskographyv5medium5bagslots5scrub",
 ]
+
+OBJECT_ID_TO_LABEL = {
+    0: 'stuff',
+    1: 'floor',
+    2: 'floor',
+    3: 'stuff',
+    4: 'stuff',
+    5: 'chair', # receptacle?
+    6: 'table', # receptacle?
+    7: 'couch', # receptacle?
+    8: 'stuff',
+    9: 'stuff',
+    10: 'desk_objects', # objects
+    11: 'stuff',
+    12: 'wall_objects', # objects?
+    13: 'plant', # objects
+    14: 'stuff',
+    15: 'stuff',
+    16: 'stuff',
+    17: 'stuff',
+    18: 'trashcan', # receptacle
+    19: 'wall',
+    20: 'stuff',
+    21: 'fire_extinguisher', # objects
+    22: 'big_table' # receptacle
+}
+
+
